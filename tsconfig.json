@@ -12,7 +12,18 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@theme": ["client/design/theme/index.ts"],
+      "@elements": ["client/design/elements/index.ts"],
+      "@components": ["client/components/index.ts"],
+      "@svgs": ["client/components/svg/index.ts"],
+      "@types": ["types/index.ts"],
+      "@mocks": ["mocks/index.ts"],
+      "@views/*": ["client/views/*"],
+      "@styles": ["client/design/styles/index.ts"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
