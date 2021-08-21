@@ -5,11 +5,12 @@ import { InputProps } from './input.types'
 
 const Input = styled('input')<InputProps>(
   {
-    borderRadius: '1rem',
     border: 0,
     padding: '1rem',
     fontSize: '14pt',
     fontWeight: 'lighter',
+    backgroundColor: 'none',
+    width: '100%',
   },
   compose(color, textAlign, boxShadow, space, position)
 )
