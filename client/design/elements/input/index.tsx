@@ -7,7 +7,7 @@ const Input = styled('input')<InputProps>(
   {
     border: 0,
     padding: '1rem',
-    fontSize: '14pt',
+    fontSize: '13pt',
     fontWeight: 'lighter',
     backgroundColor: 'none',
     width: '100%',

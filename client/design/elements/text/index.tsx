@@ -4,8 +4,9 @@ import { color, compose, textAlign, textShadow, typography } from 'styled-system
 
 export const Text = styled('p')(
   {
-    fontSize: fontSizes.Medium,
-    color: PALETTE.GREY,
+    fontSize: fontSizes.Small,
+    color: PALETTE.GREY_DARK,
+    fontWeight: 'lighter',
   },
   compose(color, textAlign, textShadow, typography)
 )
