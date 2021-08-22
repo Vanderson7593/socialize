@@ -10,12 +10,12 @@ const Message: FC<{ isReaded: boolean; c: boolean }> = ({ isReaded, c }) => {
   return (
     <Flex style={{ gap: 10, cursor: 'pointer' }}>
       <Flex>
-        <Avatar src="/delma.jpg" width={70} height={70} />
+        <Avatar src="/van.jpg" width={70} height={70} />
       </Flex>
       <Flex>
         <Flex flex="1">
           <Flex flexDirection="column" style={{ gap: 4 }} width={279}>
-            <Heading color={colors.BLUE}>Delma Castro</Heading>
+            <Heading color={colors.BLUE}>Vanderson Telema</Heading>
             <Text>Nós estamos usando, styled-system e @emotion styled!</Text>
           </Flex>
         </Flex>
