@@ -9,6 +9,6 @@ export const fontSizes = {
   Medium: '2rem',
   Small: '1.7rem',
   ExtraSmall: '1.2rem',
-};
+}
 
-export type FontSizes = typeof fontSizes;
+export type FontSizes = typeof fontSizes

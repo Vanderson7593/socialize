@@ -24,6 +24,7 @@
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
     "react/state-in-constructor": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "no-nested-ternary": "off"
   }
 }
