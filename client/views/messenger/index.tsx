@@ -1,6 +1,7 @@
 import { Flex, View } from '@elements'
 import { FC } from 'react'
 import LeftSide from './components/left-side'
+import Middle from './components/middle'
 
 const Messenger: FC = () => (
   <View>
@@ -10,6 +11,7 @@ const Messenger: FC = () => (
       justifyContent={['center', 'center', 'center', 'flex-start']}
     >
       <LeftSide />
+      <Middle />
       <Flex>
         <h1>Right Side</h1>
       </Flex>
