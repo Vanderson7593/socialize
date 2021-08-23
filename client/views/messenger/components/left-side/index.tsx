@@ -23,13 +23,9 @@ const LeftSide: FC = () => {
         style={{ gap: 10 }}
       >
         <Flex>
-          <Avatar src="/me.jpg" width={100} height={100} alt="user-profile-image" />
+          <Avatar src="/me.jpg" width={90} height={90} alt="user-profile-image" />
         </Flex>
-        <Flex
-          flexDirection="column"
-          alignItems={['center', 'center', 'center', 'flex-start']}
-          textAlign="center"
-        >
+        <Flex flexDirection="column" alignItems={['center', 'center', 'center', 'flex-start']}>
           <Heading color={colors.BLUE} as="h4">
             Vanderson Telema
           </Heading>

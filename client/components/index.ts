@@ -1,3 +1,5 @@
 export { default as Input } from './input'
 export { default as Avatar } from './avatar'
 export { default as Badge } from './badge'
+export { default as Divider } from './divider'
+export { default as Online } from './online'
