@@ -9,7 +9,7 @@ import { TextWrapper } from './message.styles'
 const Message: FC<{ isReceived?: boolean; bg?: string }> = ({ isReceived }) => {
   const { colors } = useTheme()
   const renderAvatar = () => <Avatar src="/val.jpg" width={30} height={30} />
-  const renderText = () => <Text isReceived={isReceived}>Olá Vanderson Telema Dev</Text>
+  const renderText = () => <Text isReceived={isReceived}>Olá Vanderson Telema</Text>
 
   const styles = {
     borderRadius: 20,
