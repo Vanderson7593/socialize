@@ -8,7 +8,7 @@ const Message: FC<{ isReceived?: boolean; bg?: string }> = ({ isReceived }) => {
   const renderAvatar = () => <Avatar src="/val.jpg" width={30} height={30} />
   const renderText = () => (
     <Text bg={isReceived ? theme.colors.FOREGROUND : theme.colors.BLUE}>
-      <Text>Olá Vanderson</Text>
+      <Text>Olá Vanderson Telema Dev</Text>
     </Text>
   )
 
