@@ -1,4 +1,4 @@
-import { Avatar, Divider, Online } from '@components'
+import { Avatar, Divider, Message, Online } from '@components'
 import { Flex, Text, View } from '@elements'
 import { useTheme } from '@emotion/react'
 import { FC } from 'react'
@@ -8,7 +8,6 @@ const Middle: FC = () => {
   return (
     <Flex
       flexDirection="column"
-      // alignItems={['center', 'center', 'center', 'flex-start']}
       width={['100vw', '100vw', '100vw', '900px']}
       p={['10%', '8%', '6%', '2%']}
       style={{ gap: 10 }}
@@ -26,8 +25,18 @@ const Middle: FC = () => {
       </Flex>
       <View>
         <Divider />
+      </View>
+      <View>
         <Divider text="Tomorrow" />
       </View>
+      <Flex justifyContent="space-between">
+        {[{ isReceived: true }, { isReceived: false }].map(({ isReceived }, index) => (
+          <Flex flexDirection="column">
+            {index !== 0 && <View mb={50} />}
+            <Message isReceived={isReceived} />
+          </Flex>
+        ))}
+      </Flex>
     </Flex>
   )
 }
