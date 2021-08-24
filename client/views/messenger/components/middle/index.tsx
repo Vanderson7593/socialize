@@ -2,6 +2,7 @@ import { Avatar, Divider, Message, Online } from '@components'
 import { Flex, Text, View } from '@elements'
 import { useTheme } from '@emotion/react'
 import { FC } from 'react'
+import { v4 } from 'uuid'
 
 const Middle: FC = () => {
   const { colors, fontSizes } = useTheme()
@@ -31,7 +32,7 @@ const Middle: FC = () => {
       </View>
       <Flex justifyContent="space-between">
         {[{ isReceived: true }, { isReceived: false }].map(({ isReceived }, index) => (
-          <Flex flexDirection="column">
+          <Flex key={v4()} flexDirection="column">
             {index !== 0 && <View mb={50} />}
             <Message isReceived={isReceived} />
           </Flex>
