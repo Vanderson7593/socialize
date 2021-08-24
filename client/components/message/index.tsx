@@ -4,12 +4,9 @@ import { theme } from '@theme'
 import { FC } from 'react'
 import { color } from 'styled-system'
 import Avatar from '../avatar'
-import { TextWrapper } from './message.styles'
+import { MessageWrapper, TextWrapper } from './message.styles'
 
-const Message: FC<{ isReceived?: boolean; bg?: string; isLastOne: boolean }> = ({
-  isReceived,
-  isLastOne,
-}) => {
+const Message: FC<{ isReceived: boolean; isLastOne: boolean }> = ({ isReceived, isLastOne }) => {
   const { colors } = useTheme()
   const renderAvatar = () => (
     <View>
@@ -32,15 +29,15 @@ const Message: FC<{ isReceived?: boolean; bg?: string; isLastOne: boolean }> = (
   return (
     <>
       {isReceived ? (
-        <Flex alignItems="flex-end" style={{ gap: 10 }}>
+        <MessageWrapper>
           <View>{renderAvatar()}</View>
           <View>{renderText()}</View>
-        </Flex>
+        </MessageWrapper>
       ) : (
-        <Flex alignItems="flex-end" style={{ gap: 10 }}>
+        <MessageWrapper>
           <View>{renderText()}</View>
           <View>{renderAvatar()}</View>
-        </Flex>
+        </MessageWrapper>
       )}
     </>
   )
