@@ -6,27 +6,40 @@ import { color } from 'styled-system'
 import Avatar from '../avatar'
 import { TextWrapper } from './message.styles'
 
-const Message: FC<{ isReceived?: boolean; bg?: string }> = ({ isReceived }) => {
+const Message: FC<{ isReceived?: boolean; bg?: string; isLastOne: boolean }> = ({
+  isReceived,
+  isLastOne,
+}) => {
   const { colors } = useTheme()
-  const renderAvatar = () => <Avatar src="/val.jpg" width={30} height={30} />
-  const renderText = () => <Text isReceived={isReceived}>Olá Vanderson </Text>
+  const renderAvatar = () => (
+    <View>
+      {isLastOne ? (
+        <Avatar src="/val.jpg" width={30} height={30} />
+      ) : (
+        <View width={30} height={30} />
+      )}
+    </View>
+  )
 
-  const styles = {
-    borderRadius: 20,
-    padding: 5,
-  } as const
+  const renderText = () => (
+    <View>
+      <TextWrapper isLastOne={isLastOne} isReceived={isReceived as boolean}>
+        Olá Vanderson
+      </TextWrapper>
+    </View>
+  )
 
   return (
     <>
       {isReceived ? (
-        <Flex alignItems="center" style={{ gap: 10 }}>
+        <Flex alignItems="flex-end" style={{ gap: 10 }}>
           <View>{renderAvatar()}</View>
           <View>{renderText()}</View>
         </Flex>
       ) : (
-        <Flex alignItems="center" style={{ gap: 10 }}>
+        <Flex alignItems="flex-end" style={{ gap: 10 }}>
           <View>{renderText()}</View>
-          <Flex style={styles}>{renderAvatar()}</Flex>
+          <View>{renderAvatar()}</View>
         </Flex>
       )}
     </>

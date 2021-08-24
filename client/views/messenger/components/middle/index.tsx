@@ -30,11 +30,19 @@ const Middle: FC = () => {
       <View>
         <Divider text="Tomorrow" />
       </View>
-      <Flex justifyContent="space-between">
-        {[{ isReceived: true }, { isReceived: false }].map(({ isReceived }, index) => (
-          <Flex key={v4()} flexDirection="column">
-            {index !== 0 && <View mb={50} />}
-            <Message isReceived={isReceived} />
+      <Flex flexDirection="column">
+        {[
+          { isReceived: true, isLastOne: true },
+          { isReceived: false, isLastOne: false },
+          { isReceived: false, isLastOne: true },
+        ].map(({ isReceived, isLastOne }, index) => (
+          <Flex
+            key={v4()}
+            flexDirection="column"
+            alignSelf={`${isReceived ? 'flex-start' : 'flex-end'}`}
+          >
+            {index !== 0 && <View mb={10} />}
+            <Message isLastOne={isLastOne} isReceived={isReceived} />
           </Flex>
         ))}
       </Flex>
