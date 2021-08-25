@@ -10,7 +10,7 @@ const Middle: FC = () => {
     <Flex
       flexDirection="column"
       width={['100vw', '100vw', '100vw', '900px']}
-      p={['10%', '8%', '6%', '3%']}
+      p={['10%', '8%', '6%', '2%']}
       style={{ gap: 10 }}
     >
       <Flex alignItems={['center']} style={{ gap: 10 }}>
