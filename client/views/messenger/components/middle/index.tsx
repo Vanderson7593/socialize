@@ -19,7 +19,7 @@ const Middle: FC = () => {
         </Flex>
         <Flex alignItems={['center']} style={{ gap: 10 }}>
           <Text fontWeight="500" fontSize={fontSizes.Large} color={colors.GREY_DARK}>
-            Vanderson Telema Dev
+            Vanderson Telema
           </Text>
           <Online />
         </Flex>
