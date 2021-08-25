@@ -7,7 +7,7 @@ import Avatar from '../avatar'
 import { MessageWrapper, TextWrapper } from './message.styles'
 
 const Message: FC<{ isReceived: boolean; isLastOne: boolean }> = ({ isReceived, isLastOne }) => {
-  const { colors } = useTheme()
+  // const { colors } = useTheme()
   const renderAvatar = () => (
     <View>
       {isLastOne ? (
