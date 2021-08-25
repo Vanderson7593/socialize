@@ -28,7 +28,7 @@ const Middle: FC = () => {
         <Divider />
       </View>
       <View>
-        <Divider text="Today " />
+        <Divider text="Today" />
       </View>
       <Flex flexDirection="column">
         {[
