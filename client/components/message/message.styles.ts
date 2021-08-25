@@ -27,6 +27,6 @@ export const TextWrapper = styled(Flex)<{ isReceived: boolean; isLastOne: boolea
       border-top-left-radius: 14px;
       border-bottom-left-radius: 14px;        
       border-top-right-radius: 14px;
-      ${isLastOne === true && 'border-bottom-right-radius: 0px'};
+      ${isLastOne && 'border-bottom-right-radius: 0px'};
       `}
 `
