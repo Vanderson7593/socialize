@@ -11,9 +11,9 @@ const Footer: FC = () => {
       <View>
         <Divider />
       </View>
-      <Flex alignItems="center">
+      <Flex alignItems="flex-end">
         <Flex flexGrow={1}>
-          <Input placeholder="Escreva alguma coisa!" bgColor={colors.FOREGROUND} />
+          <Input isTextArea placeholder="Escreva alguma coisa!" bgColor={colors.FOREGROUND} />
         </Flex>
         <Flex>
           <Send />

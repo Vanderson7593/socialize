@@ -3,4 +3,5 @@ export interface InputProps {
   icon?: JSX.Element
   placeholder?: string
   bgColor?: string
+  isTextArea?: boolean
 }

@@ -1,9 +1,9 @@
 import { FC } from 'react'
-import { Flex, Input as InputElement } from '@elements'
+import { Flex, Input as InputElement, TextArea } from '@elements'
 import { theme } from '@theme'
 import { InputProps } from './input.types'
 
-const Input: FC<InputProps> = ({ icon, placeholder, bgColor }) => (
+const Input: FC<InputProps> = ({ icon, placeholder, bgColor, isTextArea }) => (
   <Flex
     width="100%"
     bg={bgColor || theme.colors.WHITE}
@@ -13,8 +13,14 @@ const Input: FC<InputProps> = ({ icon, placeholder, bgColor }) => (
     py={1}
     borderRadius={25}
   >
-    {icon && icon}
-    <InputElement placeholder={placeholder} />
+    {isTextArea ? (
+      <TextArea placeholder={placeholder} />
+    ) : (
+      <>
+        {icon && icon}
+        <InputElement placeholder={placeholder} />
+      </>
+    )}
   </Flex>
 )
 
