@@ -17,7 +17,7 @@ const Middle: FC = () => {
     >
       <Flex alignItems={['center']} style={{ gap: 10 }}>
         <Flex>
-          <Avatar src="/me.jpg" width={56} height={56} alt="user-profile-image" />
+          <Avatar src="/me.jpg" width={50} height={50} alt="user-profile-image" />
         </Flex>
         <Flex alignItems={['center']} style={{ gap: 10 }}>
           <Text fontWeight="500" fontSize={fontSizes.Large} color={colors.GREY_DARK}>
