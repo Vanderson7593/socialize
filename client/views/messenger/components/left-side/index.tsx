@@ -3,7 +3,7 @@ import { Flex, Heading, Text } from '@elements'
 import { useTheme } from '@emotion/react'
 import { Search } from '@svgs'
 import { FC } from 'react'
-import Message from './components/message'
+import Chat from './components/chat'
 
 const LeftSide: FC = () => {
   const { colors } = useTheme()
@@ -13,7 +13,7 @@ const LeftSide: FC = () => {
       flexDirection="column"
       alignItems={['center', 'center', 'center', 'flex-start']}
       backgroundColor={colors.FOREGROUND}
-      width={['100vw', '100vw', '100vw', '500px']}
+      width={['100vw', '100vw', '100vw', '700px']}
       p={['10%', '8%', '6%', '2%']}
       style={{ gap: 60 }}
     >
@@ -36,11 +36,11 @@ const LeftSide: FC = () => {
         <Input placeholder="Pesquisar amigos" icon={<Search />} />
       </Flex>
       <Flex flexDirection="column" style={{ gap: 30 }}>
-        <Message isReaded c />
-        <Message isReaded={false} c={false} />
-        <Message isReaded c />
-        <Message isReaded={false} c />
-        <Message isReaded={false} c />
+        <Chat isReaded c />
+        <Chat isReaded={false} c={false} />
+        <Chat isReaded c />
+        <Chat isReaded={false} c />
+        <Chat isReaded={false} c />
       </Flex>
     </Flex>
   )

@@ -1,4 +1,4 @@
-import { Divider, Message } from '@components'
+import { Message } from '@components'
 import { Flex, View } from '@elements'
 import { FC } from 'react'
 import { v4 } from 'uuid'
@@ -12,9 +12,6 @@ const MESSAGES_ARRAY = [
 const Messages: FC = () => (
   <View>
     <Flex flexDirection="column" height="62vh" overflowY="scroll">
-      <View>
-        <Divider text="Today" />
-      </View>
       {MESSAGES_ARRAY.map(({ isReceived, isLastOne }, index) => (
         <Flex
           key={v4()}

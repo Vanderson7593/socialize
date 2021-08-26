@@ -4,7 +4,7 @@ import { useTheme } from '@emotion/react'
 import { Check } from '@svgs'
 import { FC } from 'react'
 
-const Message: FC<{ isReaded: boolean; c: boolean }> = ({ isReaded, c }) => {
+const Chat: FC<{ isReaded: boolean; c: boolean }> = ({ isReaded, c }) => {
   const { colors } = useTheme()
 
   return (
@@ -30,4 +30,4 @@ const Message: FC<{ isReaded: boolean; c: boolean }> = ({ isReaded, c }) => {
   )
 }
 
-export default Message
+export default Chat

@@ -8,7 +8,13 @@ import Messages from './components/messages'
 const Middle: FC = () => {
   const { colors, fontSizes } = useTheme()
   return (
-    <Flex flexDirection="column" p={['10%', '8%', '6%', '2%']} style={{ gap: 10 }} flexGrow={1}>
+    <Flex
+      flexDirection="column"
+      p={['10%', '4%', '6%', '2%']}
+      style={{ gap: 10 }}
+      flexGrow={1}
+      width={['100%']}
+    >
       <Flex alignItems={['center']} style={{ gap: 10 }}>
         <Flex>
           <Avatar src="/me.jpg" width={56} height={56} alt="user-profile-image" />
