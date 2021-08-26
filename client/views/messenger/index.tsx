@@ -1,10 +1,11 @@
-import { Flex, View } from '@elements'
+import { Flex } from '@elements'
 import { FC } from 'react'
 import LeftSide from './components/left-side'
 import Middle from './components/middle'
+import RightSide from './components/right-side'
 
 const Messenger: FC = () => (
-  <View>
+  <Flex>
     <Flex
       flexDirection={['column', 'column', 'column', 'row']}
       alignItems={['center', 'center', 'center', 'flex-start']}
@@ -12,11 +13,9 @@ const Messenger: FC = () => (
     >
       <LeftSide />
       <Middle />
-      <Flex>
-        <h1>Right Side</h1>
-      </Flex>
+      <RightSide />
     </Flex>
-  </View>
+  </Flex>
 )
 
 export default Messenger
