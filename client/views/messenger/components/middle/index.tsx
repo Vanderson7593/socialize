@@ -1,8 +1,9 @@
-import { Avatar, Divider, Message, Online } from '@components'
+import { Avatar, Divider, Online } from '@components'
 import { Flex, Text, View } from '@elements'
 import { useTheme } from '@emotion/react'
 import { FC } from 'react'
-import { v4 } from 'uuid'
+import Footer from './components/footer'
+import Messages from './components/messages'
 
 const Middle: FC = () => {
   const { colors, fontSizes } = useTheme()
@@ -28,24 +29,11 @@ const Middle: FC = () => {
         <Divider />
       </View>
       <View>
-        <Divider text="Today" />
+        <Messages />
       </View>
-      <Flex flexDirection="column">
-        {[
-          { isReceived: true, isLastOne: true },
-          { isReceived: false, isLastOne: false },
-          { isReceived: false, isLastOne: true },
-        ].map(({ isReceived, isLastOne }, index) => (
-          <Flex
-            key={v4()}
-            flexDirection="column"
-            alignSelf={`${isReceived ? 'flex-start' : 'flex-end'}`}
-          >
-            {index !== 0 && <View mb={10} />}
-            <Message isLastOne={isLastOne} isReceived={isReceived} />
-          </Flex>
-        ))}
-      </Flex>
+      <View>
+        <Footer />
+      </View>
     </Flex>
   )
 }
