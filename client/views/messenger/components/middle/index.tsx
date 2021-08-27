@@ -7,6 +7,7 @@ import Messages from './components/messages'
 
 const Middle: FC = () => {
   const { colors, fontSizes } = useTheme()
+
   return (
     <Flex
       flexDirection="column"

@@ -25,6 +25,7 @@
     "react/prop-types": "off",
     "react/state-in-constructor": "off",
     "import/prefer-default-export": "off",
-    "no-nested-ternary": "off"
+    "no-nested-ternary": "off",
+    "no-console": "off"
   }
 }
