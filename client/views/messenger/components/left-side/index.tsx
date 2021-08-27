@@ -14,10 +14,14 @@ const LeftSide: FC = () => {
       alignItems={['center', 'center', 'center', 'flex-start']}
       backgroundColor={colors.FOREGROUND}
       width={['100vw', '100vw', '100vw', '700px']}
-      p={['10%', '8%', '6%', '2%']}
+      p={['10%', '4%', '6%', '2%']}
       style={{ gap: 60 }}
     >
-      <Flex flexDirection="row" alignItems="center" style={{ gap: 10 }}>
+      <Flex
+        flexDirection={['column', 'column', 'row', 'row']}
+        alignItems="center"
+        style={{ gap: 10 }}
+      >
         <Flex>
           <Avatar src="/me.jpg" width={90} height={90} alt="user-profile-image" />
         </Flex>

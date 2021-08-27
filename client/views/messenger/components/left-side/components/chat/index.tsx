@@ -8,12 +8,10 @@ const Chat: FC<{ isReaded: boolean; c: boolean }> = ({ isReaded, c }) => {
   const { colors } = useTheme()
 
   return (
-    <Flex style={{ gap: 10, cursor: 'pointer' }}>
+    <View style={{ cursor: 'pointer' }}>
       <Flex>
-        <Avatar src="/van.jpg" width={70} height={70} />
-      </Flex>
-      <Flex>
-        <Flex flex="1">
+        <Flex style={{ gap: 10 }}>
+          <Avatar src="/van.jpg" width={70} height={70} />
           <Flex flexDirection="column" style={{ gap: 4 }} width={279}>
             <Heading color={colors.BLUE}>Vanderson Telema</Heading>
             <Text>Nós estamos usando, styled-system e @emotion styled!</Text>
@@ -26,7 +24,7 @@ const Chat: FC<{ isReaded: boolean; c: boolean }> = ({ isReaded, c }) => {
           </View>
         </Flex>
       </Flex>
-    </Flex>
+    </View>
   )
 }
 
