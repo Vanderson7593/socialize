@@ -17,7 +17,7 @@ const Register: FC = () => {
     >
       <Heading textAlign="center" color={colors.BLUE} as="h3">
         Welcome to socialize <br />
-        Login to start texting!
+        Create account to start texting!
       </Heading>
       <View>
         <Text>Username</Text>
@@ -32,7 +32,7 @@ const Register: FC = () => {
       </View>
       <View style={{ cursor: 'pointer' }}>
         <Link href="#register">
-          <Heading color={colors.BLUE}>Create new account</Heading>
+          <Heading color={colors.BLUE}>I want to Login</Heading>
         </Link>
       </View>
     </Flex>

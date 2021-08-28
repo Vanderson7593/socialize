@@ -16,7 +16,7 @@ const Login: FC = () => {
       height="100vh"
     >
       <Heading textAlign="center" color={colors.BLUE} as="h3">
-        Welcome to socialize <br />
+        Welcome back! <br />
         Login to start texting!
       </Heading>
       <View>
