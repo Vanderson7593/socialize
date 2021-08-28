@@ -20,7 +20,7 @@ const Login: FC = () => {
         <Input placeholder="Email" bgColor={colors.FOREGROUND} />
       </View>
       <View>
-        <button>Start talk</button>
+        <button type="button">Start talk</button>
       </View>
     </Flex>
   )

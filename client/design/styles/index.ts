@@ -24,6 +24,11 @@ export const GlobalStyles = css`
     border-bottom-style: none;
   }
 
+  button {
+    border: none;
+    background-color: inherit;
+  }
+
   body,
   button,
   input {
@@ -31,6 +36,7 @@ export const GlobalStyles = css`
   }
   input:focus,
   textarea:focus,
+  button:focus,
   select:focus {
     outline: none;
   }
