@@ -1,13 +1,17 @@
 import { Flex, View } from '@elements'
+import { useSocketContext } from 'client/context/socket-context'
 import { FC, useEffect } from 'react'
-import SocketIO, { Socket } from 'socket.io-client'
 import LeftSide from './components/left-side'
 import Middle from './components/middle'
 
 const Messenger: FC = () => {
+  const socket = useSocketContext() as any
+
   useEffect(() => {
-    SocketIO()
-  }, [])
+    if (!socket) return
+
+    socket.on('status', (data: unknown) => console.log(data))
+  }, [socket])
 
   return (
     <View>
