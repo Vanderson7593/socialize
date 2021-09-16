@@ -3,7 +3,7 @@ import { Flex, Input as InputElement, TextArea } from '@elements'
 import { theme } from '@theme'
 import { InputProps } from './input.types'
 
-const Input: FC<InputProps> = ({ icon, placeholder, bgColor, isTextArea }) => (
+const Input: FC<InputProps> = ({ icon, placeholder, bgColor, isTextArea, innerRef }) => (
   <Flex
     width="100%"
     bg={bgColor || theme.colors.WHITE}
@@ -14,11 +14,11 @@ const Input: FC<InputProps> = ({ icon, placeholder, bgColor, isTextArea }) => (
     borderRadius={25}
   >
     {isTextArea ? (
-      <TextArea placeholder={placeholder} />
+      <TextArea ref={innerRef} placeholder={placeholder} />
     ) : (
       <>
         {icon && icon}
-        <InputElement placeholder={placeholder} />
+        <InputElement ref={innerRef} placeholder={placeholder} />
       </>
     )}
   </Flex>
