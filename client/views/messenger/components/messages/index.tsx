@@ -2,10 +2,11 @@ import { Avatar, Input } from '@components'
 import { Flex, Heading } from '@elements'
 import { useTheme } from '@emotion/react'
 import { Search } from '@svgs'
+import { signOut } from 'next-auth/client'
 import { FC } from 'react'
 import Chat from './components/chat'
 
-const LeftSide: FC = () => {
+const Messages: FC = () => {
   const { colors } = useTheme()
 
   return (
@@ -26,7 +27,7 @@ const LeftSide: FC = () => {
           <Avatar src="/me.jpg" width={90} height={90} alt="user-profile-image" />
         </Flex>
         <Flex>
-          <Heading color={colors.BLUE} as="h4">
+          <Heading onClick={() => signOut()} color={colors.BLUE} as="h4">
             Vanderson Telema
           </Heading>
         </Flex>
@@ -45,4 +46,4 @@ const LeftSide: FC = () => {
   )
 }
 
-export default LeftSide
+export default Messages

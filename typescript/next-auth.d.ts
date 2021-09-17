@@ -1,14 +1,14 @@
-import { Session } from 'next-auth'
+import NextAuth from 'next-auth'
 
-import { EUser, User } from '../constants'
-import { IUser } from '../types'
+import { EModel, EUser } from '../../constants'
+import { IUser } from '../../types'
 
 declare module 'next-auth' {
-  interface Session {
+  export interface Session {
     expires: string
     user: {
-      [EUser.Id]: string
-      [EUser.Username]: string
+      id: string
+      username: string
     }
   }
 }

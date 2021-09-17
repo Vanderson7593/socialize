@@ -1,5 +1,10 @@
 export enum EUser {
-  Username = 'name',
-  Photo = 'photo',
+  Username = 'username',
+  SocketId = 'socketId',
   State = 'state',
+}
+
+export enum EState {
+  Online = 'online',
+  Offline = 'offline',
 }

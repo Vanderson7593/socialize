@@ -19,12 +19,13 @@
       "@elements": ["client/design/elements/index.ts"],
       "@components": ["client/components/index.ts"],
       "@svgs": ["client/components/svg/index.ts"],
-      "@types": ["types/index.ts"],
+      "@types": ["types/*"],
+      "@constants": ["constants/index.ts"],
       "@mocks": ["mocks/index.ts"],
       "@views/*": ["client/views/*"],
       "@styles": ["client/design/styles/index.ts"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", ".next", ".vercel"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "typescript/next-auth.d.ts"]
 }

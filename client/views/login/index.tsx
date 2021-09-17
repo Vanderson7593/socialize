@@ -4,6 +4,7 @@ import { useTheme } from '@emotion/react'
 import { ArrowRightCircle } from '@svgs'
 import { useRouter } from 'next/router'
 import { FC, FormEvent, useRef, useState } from 'react'
+import { signIn, getProviders } from 'next-auth/client'
 
 type TError = { status: boolean; message: string }
 
@@ -13,12 +14,24 @@ const Login: FC = () => {
   const usernameRef = useRef<HTMLInputElement>()
   const router = useRouter()
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (usernameRef.current?.value.length === 0) {
+
+    const formData = usernameRef.current?.value
+
+    console.log(formData)
+
+    if (formData?.length === 0) {
       setError({ status: true, message: 'Username is required!' })
       return
     }
+
+    const res = await signIn('credentials', {
+      redirect: false,
+      username: formData,
+    })
+
+    if (!res?.ok) return
 
     router.push('/')
   }

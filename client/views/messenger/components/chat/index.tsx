@@ -5,7 +5,11 @@ import { FC } from 'react'
 import Footer from './components/footer'
 import Messages from './components/messages'
 
-const Middle: FC = () => {
+type ChatProps = {
+  id: number
+}
+
+const Chat: FC<ChatProps> = ({ id }) => {
   const { colors, fontSizes } = useTheme()
 
   return (
@@ -40,4 +44,4 @@ const Middle: FC = () => {
   )
 }
 
-export default Middle
+export default Chat

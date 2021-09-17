@@ -1,17 +1,24 @@
 import { Flex, View } from '@elements'
 import { useSocketContext } from 'client/context/socket-context'
+import { useRouter } from 'next/router'
 import { FC, useEffect, useState } from 'react'
-import LeftSide from './components/left-side'
-import Middle from './components/middle'
+import { useSession } from 'next-auth/client'
+import Messages from './components/messages'
+import { UseSessionReturn } from '../../../typescript'
 
 const Messenger: FC = () => {
+  const [session] = useSession()
   const socket = useSocketContext() as any
-  const [view, setView] = useState()
+  const router = useRouter()
 
   useEffect(() => {
     if (!socket) return
     socket.on('status', (data: unknown) => console.log(data))
   }, [socket])
+
+  useEffect(() => {
+    console.log(session?.user)
+  }, [session])
 
   return (
     <View>
@@ -20,8 +27,7 @@ const Messenger: FC = () => {
         alignItems={['center', 'center', 'center', 'flex-start']}
         justifyContent={['center', 'center', 'center', 'normal']}
       >
-        <LeftSide />
-        <Middle />
+        <Messages />
       </Flex>
     </View>
   )
