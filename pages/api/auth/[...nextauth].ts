@@ -22,13 +22,13 @@ const options = {
     jwt: async (token, user) => {
       if (user) {
         token[EModel.ID] = user.id
-        token.username = user.username
+        token[EUser.Name] = user.name
       }
       return Promise.resolve(token)
     },
     session: async (session: Session, user) => {
       session.user[EModel.ID] = user[EModel.ID] as string
-      session.user[EUser.Username] = user[EUser.Username] as string
+      session.user[EUser.Name] = user[EUser.Name] as string
       return session as WithAdditionalParams<Session>
     },
     redirect: async (url: string) => Promise.resolve(url),
@@ -37,10 +37,10 @@ const options = {
     Providers.Credentials({
       name: 'Credentials',
       credentials: {
-        username: { label: EUser.Username, type: 'text' },
+        username: { label: EUser.Name, type: 'text' },
       },
       async authorize(credentials: Record<string, string>) {
-        const user = { id: uuid(), username: credentials.username }
+        const user = { id: uuid(), name: credentials.username }
         return Promise.resolve(user)
       },
     }),
