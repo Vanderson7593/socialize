@@ -2,12 +2,13 @@ import { Avatar, Input } from '@components'
 import { Flex, Heading } from '@elements'
 import { useTheme } from '@emotion/react'
 import { Search } from '@svgs'
-import { signOut } from 'next-auth/client'
+import { signOut, useSession } from 'next-auth/client'
 import { FC } from 'react'
 import Chat from './components/chat'
 
 const Messages: FC = () => {
   const { colors } = useTheme()
+  const [session] = useSession()
 
   return (
     <Flex
@@ -28,7 +29,7 @@ const Messages: FC = () => {
         </Flex>
         <Flex>
           <Heading onClick={() => signOut()} color={colors.BLUE} as="h4">
-            Vanderson Telema
+            {session?.user?.name}
           </Heading>
         </Flex>
       </Flex>
