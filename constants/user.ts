@@ -1,5 +1,5 @@
 export enum EUser {
-  Username = 'username',
+  Name = 'name',
   SocketId = 'socketId',
   State = 'state',
 }
