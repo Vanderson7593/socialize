@@ -7,7 +7,7 @@ export type WithAdditionalParams<T extends Record<string, any>> = T & Record<str
 export type UserSession = Session & {
   user: {
     [EModel.ID]: string
-    [EUser.Username]: string
+    [EUser.Name]: string
   }
 }
 

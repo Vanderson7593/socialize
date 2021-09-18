@@ -20,6 +20,7 @@
       "@components": ["client/components/index.ts"],
       "@svgs": ["client/components/svg/index.ts"],
       "@types": ["types/*"],
+      "@typescript": ["typescript/*"],
       "@constants": ["constants/index.ts"],
       "@mocks": ["mocks/index.ts"],
       "@views/*": ["client/views/*"],
@@ -27,5 +28,5 @@
     }
   },
   "exclude": ["node_modules", ".next", ".vercel"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "typescript/next-auth.d.ts"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

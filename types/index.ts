@@ -8,7 +8,7 @@ declare module 'next-auth' {
     expires: string
     user: {
       id: string
-      username: string
+      name: string
     }
   }
 }
