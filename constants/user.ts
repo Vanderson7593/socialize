@@ -1,7 +1,7 @@
 export enum EUser {
   Name = 'name',
   SocketId = 'socketId',
-  State = 'state',
+  Messages = 'messages',
 }
 
 export enum EState {

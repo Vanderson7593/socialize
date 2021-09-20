@@ -19,8 +19,6 @@ const Login: FC = () => {
 
     const formData = usernameRef.current?.value
 
-    console.log(formData)
-
     if (formData?.length === 0) {
       setError({ status: true, message: 'Username is required!' })
       return
